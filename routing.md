@@ -34,6 +34,13 @@ Most of the routes for your application will be defined in the `app/routes.php` 
 		return 'Hello World';
 	});
 
+**Registering A Route Responding To Multiple HTTP Verbs**
+
+	Route::match('GET|POST|DELETE','foo', function()
+	{
+		return 'Hello World';
+	});	
+
 **Forcing A Route To Be Served Over HTTPS**
 
 	Route::get('foo', array('https', function()
